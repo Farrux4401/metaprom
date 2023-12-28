@@ -119,7 +119,10 @@
 						<div class="header-bottom__address">
 							<img src="images/location-mark.svg" alt="mark">
 							<span>
-								<span class="location-name">Москва, </span>
+								<button type="button" class="location-name" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">
+									Москва,
+								</button>
 								район, метро,
 								радиус
 							</span>
@@ -127,56 +130,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class="big-menu" id="bigMenu">
-				<div class="container">
-					<div class="big-menu__block">
-						<div class="big-menu__box">
-							<ul>
-								<li><a href="#"><img src="images/ico_pipes.png" alt=""> Металлопродукция</a></li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_valves.png" alt=""> Промышленное оборудование</a>
-								</li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_other-railway.png" alt=""> Железнодорожная
-										отрасль</a>
-								</li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_oil.png" alt=""> Сырье и материалы</a></li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_tractors.png" alt=""> Транспорт и спецтехника</a>
-								</li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_beton.png" alt=""> Строительная отрасль</a></li>
-							</ul>
-							<ul>
-								<li><a href="#"><img src="images/ico_business.png" alt=""> Оптовые товары и услуги</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="big-menu__content">
-							<ul>
-								<li><a href="#">Черный металлопрокат</a></li>
-								<li><a href="#">Нержавеющий металлопрокат</a></li>
-								<li><a href="#">Трубы</a></li>
-								<li><a href="#">Метизы и крепеж</a></li>
-								<li><a href="#">Цветные металлы</a></li>
-								<li><a href="#">Ферросплавы, чугун, сырье</a></li>
-								<li><a href="#">Лом металлов</a></li>
-								<li><a href="#">Металлообработка</a></li>
-								<li><a href="#">Металлоконструкции, металлоизделия</a></li>
-								<li><a href="#">Прочая металлопродукция, услуги</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div> -->
 
 			<div class="big-menu" id="bigMenu">
 				<div class="container">
@@ -220,10 +173,6 @@
 					</ul>
 				</div>
 			</div>
-
-
-
-
 		</section>
 		<!-- header-bottom end -->
 
@@ -744,6 +693,64 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+
+
+	<!-- Modal -->
+	<div class="modal fade site-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="exampleModalLabel">Выберите регион или город</h1>
+					<button type="button" class="btn-close modal-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-search">
+						<form class="modal-search__form">
+							<div class="modal-search__control">
+								<input type="search" placeholder="Москва">
+							</div>
+							<button class="modal-search__btn">Найти</button>
+						</form>
+					</div>
+					<div class="region-block">
+						<ul class="region-block__list">
+							<li><a href="#">Москва</a></li>
+							<li><a href="#">Московская область</a></li>
+							<li><a href="#">Санкт-Петербург</a></li>
+							<li><a href="#">Ленинградская область</a></li>
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Краснодар</a></li>
+							<li><a href="#">Новосибирск</a></li>
+							<li><a href="#">Красноярск</a></li>
+						</ul>
+						<ul class="region-block__list">
+							<li><a href="#">Челябинск</a></li>
+							<li><a href="#">Ростов-на-Дону</a></li>
+							<li><a href="#">Тюмень</a></li>
+							<li><a href="#">Уфа</a></li>
+							<li><a href="#">Казань</a></li>
+							<li><a href="#">Пермь</a></li>
+							<li><a href="#">Нижний Новгород</a></li>
+							<li><a href="#">Самара</a></li>
+						</ul>
+						<ul class="region-block__list">
+							<li><a href="#">Саратов</a></li>
+							<li><a href="#">Омск</a></li>
+							<li><a href="#">Балашиха</a></li>
+							<li><a href="#">Волгоград</a></li>
+							<li><a href="#">Воронеж</a></li>
+							<li><a href="#">Иркутск</a></li>
+							<li><a href="#">Хабаровск</a></li>
+							<li><a href="#">Томск</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+
 </body>
 
 </html>

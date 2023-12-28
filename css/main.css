@@ -169,8 +169,8 @@ h6 {
 }
 
 .header-bottom__address {
-  align-items: baseline;
   display: flex;
+  align-items: flex-start;
   color: var(--gray2-color);
   font-size: 14px;
   font-weight: 400;
@@ -180,12 +180,11 @@ h6 {
 .header-bottom__address img {
   transform: translateY(3px);
 }
-.header-bottom__address span {
-  display: block;
-}
 .header-bottom__address .location-name {
   display: block;
   color: var(--black-color);
+  border: none;
+  background: transparent;
 }
 
 /* big-menu */
@@ -836,4 +835,94 @@ h6 {
   font-weight: 400;
   line-height: 10px; /* 125% */
   text-decoration-line: underline;
+}
+
+/***************************** MODAL *****************************/
+.site-modal .modal-title {
+  color: var(--black-color);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 20px; /* 80% */
+}
+.modal-dialog {
+  max-width: 940px;
+}
+.modal-content {
+  border-radius: 6px;
+  background: var(--white-color);
+  box-shadow: 0px 20px 30px 0px rgba(22, 33, 40, 0.05);
+  padding: 50px 60px;
+}
+.site-modal .modal-header {
+  padding: 0;
+  border: none;
+  margin-bottom: 28px;
+}
+.modal-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.site-modal .modal-body {
+  padding: 0;
+}
+.modal-search {
+  margin-bottom: 55px;
+}
+.modal-search__form {
+  display: flex;
+}
+
+.modal-search__control {
+  flex-basis: 470px;
+  margin-right: 24px;
+}
+.modal-search__control input {
+  width: 470px;
+  display: block;
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  padding: 14px 20px;
+
+  border-radius: 6px;
+  border: 1px solid #f5f5f5;
+  background: #fff;
+}
+.modal-search__control input:focus {
+  outline: none;
+}
+
+.modal-search__btn {
+  color: var(--white-color);
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  border-radius: 6px;
+  background: var(--blue-color);
+  padding: 14px 58px;
+  /* padding-left: 58px;
+  padding-right: 58px; */
+}
+
+.region-block {
+  display: flex;
+  gap: 100px;
+}
+
+.region-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.region-block__list a {
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  text-decoration: none;
 }
