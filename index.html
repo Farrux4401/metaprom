@@ -18,34 +18,34 @@
 		<div class="header">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg">
-					<div class="container-fluid">
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-							aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav me-auto  mb-lg-0">
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="#">Компании</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Объявления</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Реклама на портале</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">О портале</a>
-								</li>
-							</ul>
-							<div class="header__action">
-								<a class="header__link" href="#">Вход и регистрация</a>
-								<a class="btn header__btn" href="#">Создать объявление</a>
-								<a class="btn header__btn" href="#">Разместить компанию</a>
-							</div>
+					<nav class="navbar">
+						<!-- <a href="#" class="logo">Logo</a> -->
+						<img class="mobile-logo" src="images/logo.png" alt="">
+						<ul class="header-nav__menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Компании</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Объявления</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Реклама на портале</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">О портале</a>
+							</li>
+						</ul>
+						<div class="header__action">
+							<a class="header__link" href="#">Вход и регистрация</a>
+							<a class="btn header__btn" href="#">Создать объявление</a>
+							<a class="btn header__btn" href="#">Разместить компанию</a>
 						</div>
-					</div>
+						<div class="hamburger">
+							<span class="bar"></span>
+							<span class="bar"></span>
+							<span class="bar"></span>
+						</div>
+					</nav>
 				</nav>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 							<a href="#"><img src="images/logo.png" alt="Logo"></a>
 						</div>
 					</div>
-					<div id="regionBtn" class="header-bottom__item header-bottom__item_region">
+					<div class="regionBtn header-bottom__item header-bottom__item_region">
 						<div class="header__action">
 							<button class="header-bottom__btn">
 								<span>
@@ -92,6 +92,76 @@
 									<a href="#">Предложения</a>
 									<a href="#">Спрос</a>
 								</div>
+
+								<div class="filter-block">
+									<div class="filter-block__head">
+										<button class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+												height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg></button>
+										<div class="filter-title__mobile">
+											Фильтры
+										</div>
+										<button class="clean-btn">Сбросить</button>
+									</div>
+									<div class="header-bottom__address header-bottom__address_mobile">
+										<img src="images/location-mark.svg" alt="mark">
+										<span>
+											<button type="button" class="location-name" data-bs-toggle="modal"
+												data-bs-target="#exampleModal">
+												Москва,
+											</button>
+											район, метро,
+											радиус
+										</span>
+									</div>
+									<div class="tabs-block">
+										<ul class="tabs">
+											<li><a href="#tab1">Объявления</a></li>
+											<li><a href="#tab2">Компании</a></li>
+										</ul>
+										<div class="tab_container">
+											<div id="tab1" class="tab_content">
+												<p class="tab_container_title">Что ищем</p>
+												<div class="header-bottom__radios header-bottom__radios_mobile">
+													<div class="advert-radios">
+														<div class="notice-radio">
+															<input type="radio" id="notice" name="fav_language"
+																value="notice">
+															<label for="notice">Объявления</label><br>
+														</div>
+														<div class="company-radio">
+															<input type="radio" id="company" name="fav_language"
+																value="company">
+															<label for="company">Компании</label><br>
+														</div>
+													</div>
+													<div class="switch-radio">
+														<label class="toggle-control">
+															<input type="checkbox" checked="checked" />
+															<span class="control"></span>
+															<p class="switch-txt">Неликвиды</p>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div id="tab2" class="tab_content">
+												<!-- Content -->
+											</div>
+										</div>
+									</div>
+
+									<div class="filter-block__btn">
+										<button>Применить</button>
+									</div>
+								</div>
+
+								<button class="settings-btn">
+									<img src="images/settings.svg" alt="">
+								</button>
 								<button class="header-search__btn">Найти</button>
 							</div>
 							<div class="header-bottom__radios">
@@ -115,7 +185,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="header-bottom__item">
+					<div class="header-bottom__item location-mark">
 						<div class="header-bottom__address">
 							<img src="images/location-mark.svg" alt="mark">
 							<span>
@@ -133,16 +203,31 @@
 
 			<div class="big-menu" id="bigMenu">
 				<div class="container">
+					<button class="close-bigmenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							viewBox="0 0 24 24" fill="none">
+							<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg></button>
 					<ul class="nav-menu nav-vertical">
 						<li class="nav-vertical__item"><a href="#"><img src="images/ico_pipes.png" alt="">
 								Металлопродукция</a>
 							<ul class="big-menu__sub">
-								<li class="catalog-title">Каталог поставщиков <span><svg
-											xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-											viewBox="0 0 14 14" fill="none">
-											<path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="black" stroke-width="2"
-												stroke-linecap="round" stroke-linejoin="round" />
-										</svg></span></li>
+								<li class="big-menu__sub-cbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg></li>
+								<li class="catalog-title"><a href="#" class="catalog-link__title">
+										Каталог поставщиков <span><svg xmlns="http://www.w3.org/2000/svg" width="14"
+												height="14" viewBox="0 0 14 14" fill="none">
+												<path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="black"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg></span>
+									</a></li>
 								<li><a href="#">Черный металлопрокат</a></li>
 								<li><a href="#">Нержавеющий металлопрокат</a></li>
 								<li><a href="#">Трубы</a></li>
@@ -195,10 +280,11 @@
 									</span> Как попасть в рейтинг</a>
 							</div>
 							<div class="row row-gap-4">
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img1.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img1.png"
+												alt="company name">
 											<img class="star-img" src="images/blue-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">Рент Металл</a>
@@ -209,10 +295,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img2.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img2.png"
+												alt="company name">
 											<img class="star-img" src="images/orange-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">Теплообменные трубы</a>
@@ -223,10 +310,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img3.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img3.png"
+												alt="company name">
 											<img class="star-img" src="images/orange-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">ПФК Навигатор</a>
@@ -236,10 +324,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img4.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img4.png"
+												alt="company name">
 											<img class="star-img" src="images/gray-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">МСР Групп</a>
@@ -251,10 +340,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img5.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img5.png"
+												alt="company name">
 											<img class="star-img" src="images/gray-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">ООО Аверс</a>
@@ -264,10 +354,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img6.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img6.png"
+												alt="company name">
 											<img class="star-img" src="images/blue-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">Металл Гарантс</a>
@@ -278,10 +369,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img7.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img7.png"
+												alt="company name">
 											<img class="star-img" src="images/blue-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">УралПрокат</a>
@@ -291,10 +383,11 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
-											<img src="images/card-img8.png" alt="company name">
+											<img class="rating-inner__img" src="images/card-img8.png"
+												alt="company name">
 											<img class="star-img" src="images/orange-star.svg" alt="">
 										</div>
 										<a href="#" class="rating-card__company">УралМост</a>
@@ -325,7 +418,7 @@
 									</span> Как всегда быть в Топе</a>
 							</div>
 							<div class="row row-gap-4">
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice1.jpg" alt="company name">
@@ -339,7 +432,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice2.jpg" alt="company name">
@@ -352,7 +445,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice3.jpg" alt="company name">
@@ -366,7 +459,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice4.jpg" alt="company name">
@@ -380,7 +473,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice5.jpg" alt="company name">
@@ -394,7 +487,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice6.jpg" alt="company name">
@@ -408,7 +501,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice7.jpg" alt="company name">
@@ -422,7 +515,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-6 col-lg-3">
 									<div class="rating-card">
 										<div class="rating-card__img">
 											<img class="card-img" src="images/notice8.jpg" alt="company name">
@@ -441,7 +534,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 right-aside">
 						<div class="banner-block">
 							<a href="#">
 								<img class="banner-block__img" src="images/banner.jpg" alt="">
@@ -546,8 +639,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-9">
-						<footer class="row justify-content-between row-cols-1 row-cols-sm-2 row-cols-md-5">
 
+						<div class="row footer-mobile__menu">
 							<div class="col-lg-3">
 								<h5>Каталог поставщиков</h5>
 								<ul class="nav flex-column">
@@ -632,7 +725,8 @@
 								<div class="footer-menu__bg_white">
 									<h5>Реклама на портале</h5>
 									<ul class="nav flex-column">
-										<li class="nav-item "><a href="#" class="nav-link p-0 ">Комплексное продвижение
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Комплексное
+												продвижение
 											</a></li>
 										<li class="nav-item "><a href="#" class="nav-link p-0 ">Баннерная реклама
 											</a></li>
@@ -658,7 +752,9 @@
 									</ul>
 								</div>
 							</div>
+						</div>
 
+						<div class="row">
 							<div class="col-lg-12 footer-copy">
 								<ul class="footer-copy__list">
 									<li>© 2000-2023 Metaprom.ru - торгово-промышленный портал </li>
@@ -668,6 +764,8 @@
 											поддержка</a></li>
 								</ul>
 							</div>
+						</div>
+						<div class="row">
 							<div class="col-lg-12 footer-stats">
 								<ul class="footer-stats__list">
 									<li><a href="#"><img src="images/footer-img1.png" alt=""> <span>SEO-продвижение
@@ -676,13 +774,24 @@
 									<li><a href="#"><img src="images/footer-img3.png" alt=""></a></li>
 								</ul>
 							</div>
-						</footer>
+						</div>
 					</div>
 					<div class="col-lg-3"></div>
 				</div>
 			</div>
 		</footer>
 		<!-- footer end -->
+
+
+		<!-- Bottom Navigation Bar -->
+		<div class="bottom-nav">
+			<a href="#home" class="regionBtn active"><img src="images/bottom-icon1.svg" alt=""> Все отрасли
+			</a>
+			<a href="#news"><img src="images/bottom-icon2.svg" alt=""> Профиль</a>
+			<a href="#contact"><img src="images/bottom-icon3.svg" alt=""> Объявление</a>
+			<a href="#contact"><img src="images/bottom-icon4.svg" alt=""> Компания</a>
+		</div>
+
 
 
 	</div>
@@ -702,15 +811,17 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1 class="modal-title" id="exampleModalLabel">Выберите регион или город</h1>
-					<button type="button" class="btn-close modal-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close modal-btn" data-bs-dismiss="modal"
+						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-search">
 						<form class="modal-search__form">
 							<div class="modal-search__control">
-								<input type="search" placeholder="Москва">
+								<input id="myInput" type="search" placeholder="Москва">
 							</div>
 							<button class="modal-search__btn">Найти</button>
+							<button class="modal-search__btn modal-search__btn_mobile">Выбрать</button>
 						</form>
 					</div>
 					<div class="region-block">
