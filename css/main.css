@@ -1296,7 +1296,7 @@ li {
   .sticky {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 95%;
     background-color: #fff;
   }
   .header-search__input input {
