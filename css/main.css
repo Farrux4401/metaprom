@@ -1204,7 +1204,6 @@ li {
 @media only screen and (max-width: 600px) and (min-width: 0px) {
   body {
     min-width: 320px;
-    overflow: hidden;
   }
   .navbar {
     justify-content: space-between;
@@ -1375,9 +1374,6 @@ li {
     font-size: 14px;
     font-weight: 700;
     line-height: 20px; /* 142.857% */
-  }
-  .big-menu__sub-cbtn {
-    /* display: block !important; */
   }
   .clean-btn {
     border: none;
