@@ -944,11 +944,15 @@ li {
 }
 .modal-search__form {
   display: flex;
+  flex-direction: column;
 }
 
 .modal-search__control {
-  flex-basis: 470px;
+  display: flex;
+  flex-basis: 100%;
   margin-right: 24px;
+  margin-bottom: 50px;
+  gap: 22px;
 }
 .modal-search__control input {
   width: 470px;
@@ -1284,7 +1288,16 @@ li {
     padding: 0;
   }
   .header-bottom__item_input {
+    width: 95%;
     flex-basis: 100%;
+    position: fixed;
+    z-index: 999;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
   }
   .header-search__input input {
     padding-right: 14px;
@@ -1316,6 +1329,7 @@ li {
   }
   .rating {
     padding-bottom: 60px;
+    padding-top: 55px;
   }
   .rating-card__img {
     margin-bottom: 10px;
@@ -1509,13 +1523,16 @@ li {
     width: auto;
   }
   .modal-search {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   .modal-search__btn {
     display: none;
   }
-  .modal-search__btn_mobile {
-    display: block !important;
+  .modal-search__btn.modal-search__btn_mobile {
+    display: inline-block !important;
+    margin-top: 18px;
+    padding-left: 42px !important;
+    padding-right: 42px !important;
   }
   .modal-search__control {
     flex-basis: 100%;

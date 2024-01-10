@@ -63,3 +63,17 @@ $(document).ready(function () {
     $(selectTab).fadeIn();
   });
 });
+
+// Scroled
+let nav = document.querySelector(".header-bottom__item_input");
+let sticky = nav.offsetTop;
+window.onscroll = function () {
+  sticker();
+};
+function sticker() {
+  if (window.pageYOffset >= sticky) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
