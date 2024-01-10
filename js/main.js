@@ -31,14 +31,23 @@ $(document).ready(function () {
 
   // ***************
   $(".settings-btn").click(function () {
-    // $(".hamburger").toggleClass("active");
     $(".filter-block ").toggleClass("active");
   });
 
   $(".close-btn").click(function () {
-    // $(".hamburger").removeClass("active");
     $(".filter-block ").removeClass("active");
   });
+
+  $(".back-btn").click(function () {
+    $(".big-menu__sub").addClass("big-menu__sub-close");
+  });
+  // $(".nav-vertical__item").click(function () {
+  //   $(".big-menu__sub").toggle();
+  // });
+  // $(".back-btn").on("click touchstart", function (e) {
+  //   e.preventDefault();
+  //   history.back();
+  // });
 
   //   Tabs
   $(".tab_content").hide();

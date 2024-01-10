@@ -95,8 +95,8 @@
 
 								<div class="filter-block">
 									<div class="filter-block__head">
-										<button class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-												height="24" viewBox="0 0 24 24" fill="none">
+										<button class="close-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+												width="24" height="24" viewBox="0 0 24 24" fill="none">
 												<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2"
 													stroke-linecap="round" stroke-linejoin="round" />
 												<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2"
@@ -159,7 +159,7 @@
 									</div>
 								</div>
 
-								<button class="settings-btn">
+								<button class="settings-btn" type="button">
 									<img src="images/settings.svg" alt="">
 								</button>
 								<button class="header-search__btn">Найти</button>
@@ -203,17 +203,26 @@
 
 			<div class="big-menu" id="bigMenu">
 				<div class="container">
-					<button class="close-bigmenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							viewBox="0 0 24 24" fill="none">
-							<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
-								stroke-linejoin="round" />
-							<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
-								stroke-linejoin="round" />
-						</svg></button>
+					<div class="all-regions">
+						<button class="close-bigmenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" fill="none">
+								<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg></button>
+						<p>Все отрасли и регионы</p>
+					</div>
 					<ul class="nav-menu nav-vertical">
 						<li class="nav-vertical__item"><a href="#"><img src="images/ico_pipes.png" alt="">
 								Металлопродукция</a>
-							<ul class="big-menu__sub">
+
+							<ul class="big-menu__sub ">
+								<button type="button" class="back-btn"><svg xmlns="http://www.w3.org/2000/svg"
+										width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M12.5 3.75L6.25 10L12.5 16.25" stroke="black" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg></button>
 								<li class="big-menu__sub-cbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
 										height="24" viewBox="0 0 24 24" fill="none">
 										<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
@@ -228,6 +237,7 @@
 													stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 											</svg></span>
 									</a></li>
+
 								<li><a href="#">Черный металлопрокат</a></li>
 								<li><a href="#">Нержавеющий металлопрокат</a></li>
 								<li><a href="#">Трубы</a></li>
@@ -241,7 +251,43 @@
 							</ul>
 						</li>
 						<li class="nav-vertical__item"><a href="#"><img src="images/ico_valves.png" alt=""> Промышленное
-								оборудование</a></li>
+								оборудование</a>
+
+							<ul class="big-menu__sub ">
+								<button type="button" class="back-btn"><svg xmlns="http://www.w3.org/2000/svg"
+										width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M12.5 3.75L6.25 10L12.5 16.25" stroke="black" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg></button>
+								<li class="big-menu__sub-cbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg></li>
+								<li class="catalog-title"><a href="#" class="catalog-link__title">
+										Каталог поставщиков <span><svg xmlns="http://www.w3.org/2000/svg" width="14"
+												height="14" viewBox="0 0 14 14" fill="none">
+												<path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="black"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg></span>
+									</a></li>
+
+								<li><a href="#">Черный металлопрокат</a></li>
+								<li><a href="#">Нержавеющий металлопрокат</a></li>
+								<li><a href="#">Трубы</a></li>
+								<li><a href="#">Метизы и крепеж</a></li>
+								<li><a href="#">Цветные металлы</a></li>
+								<li><a href="#">Ферросплавы, чугун, сырье</a></li>
+								<li><a href="#">Лом металлов</a></li>
+								<li><a href="#">Металлообработка</a></li>
+								<li><a href="#">Металлоконструкции, металлоизделия</a></li>
+								<li><a href="#">Прочая металлопродукция, услуги</a></li>
+							</ul>
+
+
+						</li>
 						<li class="nav-vertical__item"><a href="#"><img src="images/ico_other-railway.png" alt="">
 								Железнодорожная
 								отрасль</a></li>
@@ -265,7 +311,7 @@
 		<section class="rating">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-12 col-sm-9 col-md-9 col-lg-9">
 						<div class="companies-block">
 							<div class="title">
 								<h2>Компании из нашего рейтинга</h2>
@@ -534,7 +580,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="col-lg-3 right-aside">
+					<div class="col-12 col-sm-3 col-md-3 col-lg-3 right-aside">
 						<div class="banner-block">
 							<a href="#">
 								<img class="banner-block__img" src="images/banner.jpg" alt="">
@@ -638,10 +684,10 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-sm-12 col-lg-9">
 
 						<div class="row footer-mobile__menu">
-							<div class="col-lg-3">
+							<div class="col-sm-3 col-lg-3">
 								<h5>Каталог поставщиков</h5>
 								<ul class="nav flex-column">
 									<li class="nav-item "><a href="#" class="nav-link p-0 ">Компании по отраслям
@@ -673,7 +719,7 @@
 
 							</div>
 
-							<div class="col-lg-3">
+							<div class="col-sm-3 col-lg-3">
 								<h5>Доски объявлений</h5>
 								<ul class="nav flex-column">
 									<li class="nav-item "><a href="#" class="nav-link p-0 ">Металлопродукция</a>
@@ -700,7 +746,7 @@
 								</ul>
 							</div>
 
-							<div class="col-lg-3">
+							<div class="col-sm-3 col-lg-3">
 								<h5>Новости и обзоры</h5>
 								<ul class="nav flex-column">
 									<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости промышленности
@@ -721,7 +767,7 @@
 											продукция</a></li>
 								</ul>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-sm-3 col-lg-3">
 								<div class="footer-menu__bg_white">
 									<h5>Реклама на портале</h5>
 									<ul class="nav flex-column">
