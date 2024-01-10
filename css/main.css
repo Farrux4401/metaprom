@@ -1290,14 +1290,17 @@ li {
   .header-bottom__item_input {
     width: 95%;
     flex-basis: 100%;
-    position: fixed;
-    z-index: 999;
+    /* position: fixed; */
+    z-index: 99;
   }
   .sticky {
+    width: 95%;
     position: fixed;
     top: 0;
-    width: 95%;
     background-color: #fff;
+    padding-top: 10px;
+    z-index: 99;
+    transition: all 0.3s ease-in-out;
   }
   .header-search__input input {
     padding-right: 14px;
@@ -1329,7 +1332,7 @@ li {
   }
   .rating {
     padding-bottom: 60px;
-    padding-top: 55px;
+    /* padding-top: 55px; */
   }
   .rating-card__img {
     margin-bottom: 10px;
