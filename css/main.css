@@ -1288,7 +1288,7 @@ li {
     padding: 0;
   }
   .header-bottom__item_input {
-    width: 95%;
+    width: 100%;
     flex-basis: 100%;
     /* position: fixed; */
     z-index: 99;
@@ -1301,6 +1301,13 @@ li {
     padding-top: 10px;
     z-index: 99;
     transition: all 0.3s ease-in-out;
+  }
+  .header-search__btn {
+    transform: translateX(0);
+  }
+  .modal-dialog {
+    height: 100vh;
+    overflow-y: scroll;
   }
   .header-search__input input {
     padding-right: 14px;
