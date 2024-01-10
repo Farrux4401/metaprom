@@ -332,9 +332,11 @@ li {
 .nav-menu ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
 }
-
+.catalog-link__title {
+  padding: 0 !important;
+}
 /* center */
 .nav-center {
   float: right;
@@ -820,6 +822,14 @@ li {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  transition: 0.3s all ease;
+  display: block;
+}
+.all-regions {
+  display: none;
+}
+.industry-news__list a:hover {
+  opacity: 0.5;
 }
 .footer {
   background-color: var(--blue-color);
@@ -1191,7 +1201,11 @@ li {
   }
 }
 
-@media (max-width: 600px) and (min-width: 0px) {
+@media only screen and (max-width: 600px) and (min-width: 0px) {
+  body {
+    min-width: 320px;
+    overflow: hidden;
+  }
   .navbar {
     justify-content: space-between;
   }
@@ -1463,7 +1477,11 @@ li {
   }
   .modal-content {
     padding: 20px;
-    padding-bottom: 116px;
+    padding-bottom: 30px;
+  }
+  .modal-search__control {
+    margin: 0;
+    width: 100%;
   }
   .site-modal .modal-header {
     justify-content: center;
@@ -1483,7 +1501,16 @@ li {
     gap: 0;
   }
   .modal-search__control input {
-    width: 100%;
+    display: block;
+    width: 85%;
+  }
+  .modal-search__form {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+  .modal-search__control {
+    margin: 0;
+    width: auto;
   }
   .modal-search {
     margin-bottom: 20px;
@@ -1493,11 +1520,10 @@ li {
   }
   .modal-search__btn_mobile {
     display: block !important;
-    position: absolute;
-    bottom: -90px;
-    left: 30%;
   }
-
+  .modal-search__control {
+    flex-basis: 100%;
+  }
   /* Bottom navigation bar */
   .big-menu {
     position: fixed;
@@ -1513,7 +1539,7 @@ li {
     position: fixed;
     bottom: 0;
     width: 100%;
-    gap: 16px;
+    gap: 25px;
     padding: 8px 0;
     /* z-index: 99; */
   }
