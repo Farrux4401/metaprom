@@ -108,9 +108,7 @@ li {
 .header-bottom__content {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
 }
 .header__logo img {
   width: 100%;
@@ -208,7 +206,7 @@ li {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 .header-bottom__address img {
   transform: translateY(3px);
@@ -1039,6 +1037,9 @@ li {
   .header__action {
     gap: 15px;
   }
+  .header-bottom {
+    padding-top: 18px;
+  }
   .header__link {
     font-size: 13px;
   }
@@ -1088,7 +1089,23 @@ li {
     padding: 13px 115px 13px 14px;
   }
   .header-search__inner_btn {
+    z-index: 99;
     right: 110px;
+  }
+  .header-search__btn {
+    transform: translateX(-12px);
+    padding-top: 11.6px;
+    padding-bottom: 11.6px;
+  }
+  .header-search__input input {
+    padding-right: 14px;
+    border: 2px solid var(--blue-color);
+    border-radius: 10px;
+    position: relative;
+    z-index: 9;
+    left: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
 @media (max-width: 1024px) {
@@ -1160,7 +1177,6 @@ li {
     display: flex;
     gap: 5px;
     position: absolute;
-    /* right: 170px; */
     transform: translateX(0);
     z-index: 99;
   }
@@ -1180,6 +1196,11 @@ li {
     left: 0;
     padding-top: 11px;
     padding-bottom: 11px;
+  }
+  .header-search__btn {
+    transform: translateX(0px);
+    padding-top: 11.6px;
+    padding-bottom: 11.6px;
   }
 }
 
@@ -1486,6 +1507,7 @@ li {
   .header-bottom {
     padding-top: 0;
   }
+
   .header-bottom__content {
     gap: 0;
   }
@@ -1526,21 +1548,24 @@ li {
   .header-bottom__item_input {
     width: 100%;
     flex-basis: 100%;
-    /* position: fixed; */
+    position: relative;
+    top: 0;
     z-index: 99;
   }
-  .sticky {
-    width: 95%;
+  .header-bottom__item_input.sticky {
+    width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
+    padding-left: 12px;
     background-color: #fff;
     padding-top: 10px;
-    z-index: 99;
     transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .header-search__btn {
     transform: translateX(-12px);
-
     padding: 12.3px 24px;
   }
   .modal-dialog {

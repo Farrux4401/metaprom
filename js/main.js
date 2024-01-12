@@ -41,13 +41,6 @@ $(document).ready(function () {
   $(".back-btn").click(function () {
     $(".big-menu__sub").addClass("big-menu__sub-close");
   });
-  // $(".nav-vertical__item").click(function () {
-  //   $(".big-menu__sub").toggle();
-  // });
-  // $(".back-btn").on("click touchstart", function (e) {
-  //   e.preventDefault();
-  //   history.back();
-  // });
 
   //   Tabs
   $(".tab_content").hide();
@@ -64,16 +57,8 @@ $(document).ready(function () {
   });
 });
 
-// Scroled
-let nav = document.querySelector(".header-bottom__item_input");
-let sticky = nav.offsetTop;
-window.onscroll = function () {
-  sticker();
-};
-function sticker() {
-  if (window.pageYOffset >= sticky) {
-    nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky");
-  }
-}
+// Sticky Navbar
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".header-bottom__item_input");
+  navbar.classList.toggle("sticky", window.scrollY > 50);
+});
