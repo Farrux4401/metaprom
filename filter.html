@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Filter</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!-- Header start -->
+		<div class="header">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg">
+					<nav class="navbar">
+						<!-- <a href="#" class="logo">Logo</a> -->
+						<img class="mobile-logo" src="images/logo.png" alt="">
+						<ul class="header-nav__menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Компании</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Объявления</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Реклама на портале</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">О портале</a>
+							</li>
+						</ul>
+						<div class="header__action">
+							<a class="header__link" href="#">Вход и регистрация</a>
+							<a class="btn header__btn" href="#">Создать объявление</a>
+							<a class="btn header__btn" href="#">Разместить компанию</a>
+						</div>
+						<div class="hamburger">
+							<span class="bar"></span>
+							<span class="bar"></span>
+							<span class="bar"></span>
+						</div>
+					</nav>
+				</nav>
+			</div>
+		</div>
+		<!-- Header end -->
+
+		<!-- header-bottom start -->
+		<section class="header-bottom">
+			<div class="container container-hb">
+				<div class="header-bottom__block">
+				</div>
+				<div class="header-bottom__content">
+					<div class="header-bottom__item">
+						<div class="header__logo">
+							<a href="#"><img src="images/logo.png" alt="Logo"></a>
+						</div>
+					</div>
+					<div class="regionBtn header-bottom__item header-bottom__item_region">
+						<div class="header__action">
+							<button class="header-bottom__btn">
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+										fill="none">
+										<mask id="mask0_154_1396" style="mask-type:luminance" maskUnits="userSpaceOnUse"
+											x="0" y="0" width="19" height="18">
+											<path d="M0 0.5H18.75V18H0V0.5Z" fill="white" />
+										</mask>
+										<g mask="url(#mask0_154_1396)">
+											<path d="M15.625 13.625L18.125 16.125M0 4.875H5M0 9.875H3.75M0 14.875H5"
+												stroke="white" stroke-width="1.5" />
+											<path
+												d="M11.875 14.75C14.5674 14.75 16.75 12.5674 16.75 9.875C16.75 7.18261 14.5674 5 11.875 5C9.18261 5 7 7.18261 7 9.875C7 12.5674 9.18261 14.75 11.875 14.75Z"
+												stroke="white" stroke-width="1.5" />
+										</g>
+									</svg>
+								</span>
+								Все отрасли и регионы</button>
+						</div>
+					</div>
+					<div class="header-bottom__item header-bottom__item_input" id="header-bottom__item_input">
+						<form class="header-bottom__search">
+							<div class="header-search__input">
+								<input type="text" placeholder="Поиск по объявлениям">
+								<div class="header-search__inner_btn">
+									<a href="#">Предложения</a>
+									<a href="#">Спрос</a>
+								</div>
+
+								<div class="filter-block">
+									<div class="filter-block__head">
+										<button class="close-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+												width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2"
+													stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg></button>
+										<div class="filter-title__mobile">
+											Фильтры
+										</div>
+										<button class="clean-btn">Сбросить</button>
+									</div>
+									<div class="header-bottom__address header-bottom__address_mobile">
+										<img src="images/location-mark.svg" alt="mark">
+										<span>
+											<button type="button" class="location-name" data-bs-toggle="modal"
+												data-bs-target="#exampleModal">
+												Москва,
+											</button>
+											район, метро,
+											радиус
+										</span>
+									</div>
+									<div class="tabs-block">
+										<ul class="tabs">
+											<li><a href="#tab1">Объявления</a></li>
+											<li><a href="#tab2">Компании</a></li>
+										</ul>
+										<div class="tab_container">
+											<div id="tab1" class="tab_content">
+												<p class="tab_container_title">Что ищем</p>
+												<div class="header-bottom__radios header-bottom__radios_mobile">
+													<div class="advert-radios">
+														<div class="notice-radio">
+															<input type="radio" id="notice" name="fav_language"
+																value="notice">
+															<label for="notice">Объявления</label><br>
+														</div>
+														<div class="company-radio">
+															<input type="radio" id="company" name="fav_language"
+																value="company">
+															<label for="company">Компании</label><br>
+														</div>
+													</div>
+													<div class="switch-radio">
+														<label class="toggle-control">
+															<input type="checkbox" checked="checked" />
+															<span class="control"></span>
+															<p class="switch-txt">Неликвиды</p>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div id="tab2" class="tab_content">
+												<!-- Content -->
+											</div>
+										</div>
+									</div>
+
+									<div class="filter-block__btn">
+										<button>Применить</button>
+									</div>
+								</div>
+
+								<button class="settings-btn" type="button">
+									<img src="images/settings.svg" alt="">
+								</button>
+								<button class="header-search__btn">Найти</button>
+							</div>
+							<div class="header-bottom__radios">
+								<div class="advert-radios">
+									<div class="notice-radio">
+										<input type="radio" id="notice" name="fav_language" value="notice">
+										<label for="notice">Объявления</label><br>
+									</div>
+									<div class="company-radio">
+										<input type="radio" id="company" name="fav_language" value="company">
+										<label for="company">Компании</label><br>
+									</div>
+								</div>
+								<div class="switch-radio">
+									<label class="toggle-control">
+										<input type="checkbox" checked="checked" />
+										<span class="control"></span>
+										<p class="switch-txt">Неликвиды</p>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="header-bottom__item location-mark">
+						<div class="header-bottom__address">
+							<img src="images/location-mark.svg" alt="mark">
+							<span>
+								<button type="button" class="location-name" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">
+									Москва,
+								</button>
+								район, метро,
+								радиус
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="big-menu" id="bigMenu">
+				<div class="container">
+					<div class="all-regions">
+						<button class="close-bigmenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24" fill="none">
+								<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg></button>
+						<p>Все отрасли и регионы</p>
+					</div>
+					<ul class="nav-menu nav-vertical">
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_pipes.png" alt="">
+								Металлопродукция</a>
+
+							<ul class="big-menu__sub ">
+								<button type="button" class="back-btn"><svg xmlns="http://www.w3.org/2000/svg"
+										width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M12.5 3.75L6.25 10L12.5 16.25" stroke="black" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg></button>
+								<li class="big-menu__sub-cbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg></li>
+								<li class="catalog-title"><a href="#" class="catalog-link__title">
+										Каталог поставщиков <span><svg xmlns="http://www.w3.org/2000/svg" width="14"
+												height="14" viewBox="0 0 14 14" fill="none">
+												<path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="black"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg></span>
+									</a></li>
+
+								<li><a href="#">Черный металлопрокат</a></li>
+								<li><a href="#">Нержавеющий металлопрокат</a></li>
+								<li><a href="#">Трубы</a></li>
+								<li><a href="#">Метизы и крепеж</a></li>
+								<li><a href="#">Цветные металлы</a></li>
+								<li><a href="#">Ферросплавы, чугун, сырье</a></li>
+								<li><a href="#">Лом металлов</a></li>
+								<li><a href="#">Металлообработка</a></li>
+								<li><a href="#">Металлоконструкции, металлоизделия</a></li>
+								<li><a href="#">Прочая металлопродукция, услуги</a></li>
+							</ul>
+						</li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_valves.png" alt=""> Промышленное
+								оборудование</a>
+
+							<ul class="big-menu__sub ">
+								<button type="button" class="back-btn"><svg xmlns="http://www.w3.org/2000/svg"
+										width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M12.5 3.75L6.25 10L12.5 16.25" stroke="black" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg></button>
+								<li class="big-menu__sub-cbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+										height="24" viewBox="0 0 24 24" fill="none">
+										<path d="M18 6L6 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M6 6L18 18" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg></li>
+								<li class="catalog-title"><a href="#" class="catalog-link__title">
+										Каталог поставщиков <span><svg xmlns="http://www.w3.org/2000/svg" width="14"
+												height="14" viewBox="0 0 14 14" fill="none">
+												<path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="black"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg></span>
+									</a></li>
+
+								<li><a href="#">Черный металлопрокат</a></li>
+								<li><a href="#">Нержавеющий металлопрокат</a></li>
+								<li><a href="#">Трубы</a></li>
+								<li><a href="#">Метизы и крепеж</a></li>
+								<li><a href="#">Цветные металлы</a></li>
+								<li><a href="#">Ферросплавы, чугун, сырье</a></li>
+								<li><a href="#">Лом металлов</a></li>
+								<li><a href="#">Металлообработка</a></li>
+								<li><a href="#">Металлоконструкции, металлоизделия</a></li>
+								<li><a href="#">Прочая металлопродукция, услуги</a></li>
+							</ul>
+
+
+						</li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_other-railway.png" alt="">
+								Железнодорожная
+								отрасль</a></li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_oil.png" alt=""> Сырье и
+								материалы</a></li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_tractors.png" alt=""> Транспорт
+								и спецтехника</a>
+						</li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_beton.png" alt=""> Строительная
+								отрасль</a></li>
+						<li class="nav-vertical__item"><a href="#"><img src="images/ico_business.png" alt=""> Оптовые
+								товары и услуги</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- header-bottom end -->
+
+
+
+
+
+		<!-- Rating start -->
+		<section class="rating">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-9 col-md-9 col-lg-9">
+
+
+						<!-- Section Filter start -->
+						<section class="filter">
+							<div class="title">
+								<h2>Фильтры</h2>
+							</div>
+							<form>
+								<div class="row align-items-center">
+									<div class="col-xl-6 col-lg-12">
+										<div class="filter-razdel">
+											<div>
+												<select class="form-select" aria-label="Default select example">
+													<option selected>Раздел</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+											<div>
+												<select class="form-select" aria-label="Default select example">
+													<option selected>Регион</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+											<button class="btn-prt">Перейти</button>
+										</div>
+									</div>
+									<div class="col-xl-6 col-lg-12">
+										<div class="filter-actions">
+											<a class="filter-actions__btn1" href="#">Объявления компаний</a>
+											<a class="filter-actions__btn2" href="#">Добавить компанию</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</section>
+						<!-- Section Filter end -->
+
+						<div class="companies-block">
+							<div class="title">
+								<h2>Компании из нашего рейтинга</h2>
+								<a href="#">
+									<span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											viewBox="0 0 16 16" fill="none">
+											<path
+												d="M8.27549 11.9188L11.4255 13.9188C11.8317 14.175 12.3317 13.7938 12.213 13.325L11.3005 9.73752C11.2758 9.63808 11.2797 9.53369 11.3118 9.43638C11.3439 9.33907 11.4028 9.2528 11.4817 9.18752L14.3067 6.83127C14.6755 6.52502 14.488 5.90627 14.0067 5.87502L10.3192 5.63752C10.2186 5.63166 10.1219 5.59663 10.0409 5.53669C9.95984 5.47675 9.89803 5.39451 9.86299 5.30002L8.48799 1.83752C8.45159 1.73745 8.38528 1.65102 8.29807 1.58994C8.21086 1.52886 8.10696 1.49609 8.00049 1.49609C7.89401 1.49609 7.79011 1.52886 7.7029 1.58994C7.61569 1.65102 7.54938 1.73745 7.51299 1.83752L6.13799 5.30002C6.10294 5.39451 6.04113 5.47675 5.9601 5.53669C5.87908 5.59663 5.78235 5.63166 5.68174 5.63752L1.99424 5.87502C1.51299 5.90627 1.32549 6.52502 1.69424 6.83127L4.51924 9.18752C4.5982 9.2528 4.6571 9.33907 4.68917 9.43638C4.72124 9.53369 4.72516 9.63808 4.70049 9.73752L3.85674 13.0625C3.71299 13.625 4.31299 14.0813 4.79424 13.775L7.72549 11.9188C7.80768 11.8665 7.90308 11.8387 8.00049 11.8387C8.09789 11.8387 8.19329 11.8665 8.27549 11.9188V11.9188Z"
+												stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span> Как попасть в рейтинг</a>
+							</div>
+							<div class="row row-gap-4">
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img1.png"
+												alt="company name">
+											<img class="star-img" src="images/blue-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">Рент Металл</a>
+										<span class="rating-card__city">г. Москва</span>
+										<p class="rating-car__txt">
+											Отгрузка металлопроката со складов в Москве от производителя
+											по низким ценам за 1 метр и тонну!
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img2.png"
+												alt="company name">
+											<img class="star-img" src="images/orange-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">Теплообменные трубы</a>
+										<span class="rating-card__city">г. Челябинск</span>
+										<p class="rating-car__txt">
+											Комплексная поставка нержавеющего металлопроката отечественного
+											производства.
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img3.png"
+												alt="company name">
+											<img class="star-img" src="images/orange-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">ПФК Навигатор</a>
+										<span class="rating-card__city">г. Челябинск</span>
+										<p class="rating-car__txt">
+											Оптово-розничная продажа труб бу, восстановленных, лежалых.
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img4.png"
+												alt="company name">
+											<img class="star-img" src="images/gray-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">МСР Групп</a>
+										<span class="rating-card__city">г. Москва</span>
+										<p class="rating-car__txt">
+											Продажа металлопроката оптом
+											и розницу по доступной цене
+											с доставкой по Москве и МО
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img5.png"
+												alt="company name">
+											<img class="star-img" src="images/gray-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">ООО Аверс</a>
+										<span class="rating-card__city">г. Екатеренбург</span>
+										<p class="rating-car__txt">
+											Поковки сталь (ст.20, 45, 40Х, 65Г,09Г2С, 30ХМА )
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img6.png"
+												alt="company name">
+											<img class="star-img" src="images/blue-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">Металл Гарантс</a>
+										<span class="rating-card__city">г. Санкт-Петербург</span>
+										<p class="rating-car__txt">
+											Производство и продажа металлопроката
+											и металлоконструкций.
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img7.png"
+												alt="company name">
+											<img class="star-img" src="images/blue-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">УралПрокат</a>
+										<span class="rating-card__city">г. Екатеренбург</span>
+										<p class="rating-car__txt">
+											ООО ТД «Уралпрокат» осуществляет поставку качественного металлопроката.
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="rating-inner__img" src="images/card-img8.png"
+												alt="company name">
+											<img class="star-img" src="images/orange-star.svg" alt="">
+										</div>
+										<a href="#" class="rating-card__company">УралМост</a>
+										<span class="rating-card__city">г. Екатеренбург</span>
+										<p class="rating-car__txt">
+											Гибка металла, изготовление гнутого швеллера.
+										</p>
+									</div>
+								</div>
+							</div>
+
+
+							<nav aria-label="Page navigation example" class="pagination-block">
+								<ul class="pagination justify-content-center align-items-center">
+									<li class="page-item page-item__prev">
+										<a class="page-link">
+											<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+													viewBox="0 0 20 20" fill="none">
+													<path
+														d="M15.8327 10H4.16602M4.16602 10L9.99935 15.8333M4.16602 10L9.99935 4.16666"
+														stroke="#5C97BF" stroke-width="1.67" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg></span>
+											Назад</a>
+									</li>
+									<li class="page-item"><a class="page-link page-link__num page-link__active"
+											href="#">1</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">2</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">3</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">...</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">8</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">9</a></li>
+									<li class="page-item"><a class="page-link page-link__num" href="#">10</a></li>
+									<li class="page-item page-item__next">
+										<a class="page-link" href="#">Вперёд
+											<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+													viewBox="0 0 20 20" fill="none">
+													<path
+														d="M4.16602 10H15.8327M15.8327 10L9.99935 4.16666M15.8327 10L9.99935 15.8333"
+														stroke="#5C97BF" stroke-width="1.67" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg></span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+
+						</div>
+
+						<!--  -->
+
+						<div class="notices-block">
+							<div class="title">
+								<h2>Объявления</h2>
+								<a href="#"><span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											viewBox="0 0 16 16" fill="none">
+											<path
+												d="M8.27549 11.9188L11.4255 13.9188C11.8317 14.175 12.3317 13.7938 12.213 13.325L11.3005 9.73752C11.2758 9.63808 11.2797 9.53369 11.3118 9.43638C11.3439 9.33907 11.4028 9.2528 11.4817 9.18752L14.3067 6.83127C14.6755 6.52502 14.488 5.90627 14.0067 5.87502L10.3192 5.63752C10.2186 5.63166 10.1219 5.59663 10.0409 5.53669C9.95984 5.47675 9.89803 5.39451 9.86299 5.30002L8.48799 1.83752C8.45159 1.73745 8.38528 1.65102 8.29807 1.58994C8.21086 1.52886 8.10696 1.49609 8.00049 1.49609C7.89401 1.49609 7.79011 1.52886 7.7029 1.58994C7.61569 1.65102 7.54938 1.73745 7.51299 1.83752L6.13799 5.30002C6.10294 5.39451 6.04113 5.47675 5.9601 5.53669C5.87908 5.59663 5.78235 5.63166 5.68174 5.63752L1.99424 5.87502C1.51299 5.90627 1.32549 6.52502 1.69424 6.83127L4.51924 9.18752C4.5982 9.2528 4.6571 9.33907 4.68917 9.43638C4.72124 9.53369 4.72516 9.63808 4.70049 9.73752L3.85674 13.0625C3.71299 13.625 4.31299 14.0813 4.79424 13.775L7.72549 11.9188C7.80768 11.8665 7.90308 11.8387 8.00049 11.8387C8.09789 11.8387 8.19329 11.8665 8.27549 11.9188V11.9188Z"
+												stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span> Как всегда быть в Топе</a>
+							</div>
+							<div class="row row-gap-4">
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice1.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Дробилки конусные
+											и щековые</a>
+										<span class="rating-card__city">Завод Горных Машин, ООО</span>
+										<p class="rating-car__txt">
+											г. Орск
+											<span class="notice-date">Сегодня , в 17:41</spa>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice2.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Труба Б/У 114 159 168</a>
+										<span class="rating-card__city">СТАЛЬ-ЦЕНТР, ООО</span>
+										<p class="rating-car__txt">
+											г. Екатеренбург
+											<span class="notice-date">Сегодня , в 12:30</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice3.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Продам лист и ленту
+											мельхиоровую МН19 от 0,1 мм</a>
+										<span class="rating-card__city">МиДан-Мет, ООО</span>
+										<p class="rating-car__txt">
+											г. Кольчугино
+											<span class="notice-date">3 декабря 2023</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice4.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Производим Дробилки
+											щековые</a>
+										<span class="rating-card__city">ГЦМ, ООО</span>
+										<p class="rating-car__txt">
+											г. Санкт-Петербург
+											<sapn class="notice-date">2 декабря 2023</sapn>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice5.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Производим Дробилки
+											щековые</a>
+										<span class="rating-card__city">ГЦМ, ООО</span>
+										<p class="rating-car__txt">
+											г. Санкт-Петербург
+											<span class="notice-date">2 декабря 2023</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice6.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Грунт для металла акриловый
+											антикоррозионный Metal Primer</a>
+										<span class="rating-card__city">Лакокрасочный завод Радуга</span>
+										<p class="rating-car__txt">
+											г.Москва
+											<span class="notice-date">2 декабря 2023</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice7.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Труба толстостенная
+											Резка в размер на заготовки</a>
+										<span class="rating-card__city">ЛИОНМеталс, ООО</span>
+										<p class="rating-car__txt">
+											г. Челябинск
+											<span class="notice-date">1 декабря 2023</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-6 col-lg-3">
+									<div class="rating-card">
+										<div class="rating-card__img">
+											<img class="card-img" src="images/notice8.jpg" alt="company name">
+										</div>
+										<a href="#" class="rating-card__company">Мебель для офиса</a>
+										<span class="rating-card__city">АС-Навигатор, ООО</span>
+										<p class="rating-car__txt">
+											г. Дубна
+											<span class="notice-date">Сегодня , в 17:41</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<button class="show-content__btn">
+								Смотреть все объявления
+							</button>
+						</div>
+					</div>
+					<div class="col-12 col-sm-3 col-md-3 col-lg-3 right-aside">
+						<div class="recommends">
+							<p>Портал МЕТАПРОМ.ру рекомендует:</p>
+							<a href="#">Целевая реклама по ВАШЕЙ отрасли</a>
+							<span> - превращаем наших посетителей
+								в ваших КЛИЕНТОВ и ПАРТНЕРОВ!</span>
+						</div>
+						<div class="banner-block recommends-banner__block">
+							<a href="#">
+								<img class="banner-block__img" src="images/banner.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="banner-img__item">
+							<img src="images/kontakt-nomer.png" alt="">
+						</div>
+
+						<div class="banner-img__item">
+							<a href="#">
+								<img src="images/jelez.png" alt="">
+							</a>
+						</div>
+
+
+						<div class="banner-img__item">
+							<a href="#">
+								<img src="images/arsenal-detal.png" alt="">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Rating end -->
+
+		<!-- footer start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-9">
+
+						<div class="row footer-mobile__menu">
+							<div class="col-sm-3 col-lg-3">
+								<h5>Каталог поставщиков</h5>
+								<ul class="nav flex-column">
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Компании по отраслям
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Компании по регионам
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Приоритетные
+											компании</a></li>
+								</ul>
+
+								<h5>Сервисы и проекты</h5>
+								<ul class="nav flex-column">
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Калькулятор металла
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">База
+											прайс-листов
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости компаний </a>
+									</li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Вакансии компаний
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Каталоги продукции
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Отзывы о компаниях
+										</a></li>
+								</ul>
+
+
+
+							</div>
+
+							<div class="col-sm-3 col-lg-3">
+								<h5>Доски объявлений</h5>
+								<ul class="nav flex-column">
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Металлопродукция</a>
+									</li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Промышленное
+											оборудование</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Железнодорожная
+											отрасль</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Строительная отрасль
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Сырье
+											и материалы
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Транспорт и спецтехника
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Оптовые товары и
+											услуги</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Региональные площадки
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Спрос
+											и закупки
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Неликвиды и НВИ</a></li>
+								</ul>
+							</div>
+
+							<div class="col-sm-3 col-lg-3">
+								<h5>Новости и обзоры</h5>
+								<ul class="nav flex-column">
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости промышленности
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Обзоры и публикации
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Промышленные выставки
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости выставок
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Бизнес-журнал
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Промышленные
+											предприятия</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Информация о регионах
+										</a></li>
+									<li class="nav-item "><a href="#" class="nav-link p-0 ">Промышленная
+											продукция</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-3 col-lg-3">
+								<div class="footer-menu__bg_white">
+									<h5>Реклама на портале</h5>
+									<ul class="nav flex-column">
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Комплексное
+												продвижение
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Баннерная реклама
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Дополнительные
+												услуги</a></li>
+									</ul>
+
+									<h5>Информация о портале</h5>
+									<ul class="nav flex-column">
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Обратная связь
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости портала
+
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Новости рекламы
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Отзывы о портале
+
+											</a></li>
+										<li class="nav-item "><a href="#" class="nav-link p-0 ">Помощь по работе с
+												порталом
+											</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12 footer-copy">
+								<ul class="footer-copy__list">
+									<li>© 2000-2023 Metaprom.ru - торгово-промышленный портал </li>
+									<li><a href="#">Комплексная реклама (тарифы)</a> | <a href="#">Регистрация в
+											Каталоге
+											поставщиков</a> | <a href="#">Техническая
+											поддержка</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 footer-stats">
+								<ul class="footer-stats__list">
+									<li><a href="#"><img src="images/footer-img1.png" alt=""> <span>SEO-продвижение
+												сайта</span></a></li>
+									<li><a href="#"><img src="images/footer-img2.png" alt=""></a></li>
+									<li><a href="#"><img src="images/footer-img3.png" alt=""></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3"></div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer end -->
+
+
+		<!-- Bottom Navigation Bar -->
+		<div class="bottom-nav">
+			<a href="#home" class="regionBtn active"><img src="images/bottom-icon1.svg" alt=""> Все отрасли
+			</a>
+			<a href="#news"><img src="images/bottom-icon2.svg" alt=""> Профиль</a>
+			<a href="#contact"><img src="images/bottom-icon3.svg" alt=""> Объявление</a>
+			<a href="#contact"><img src="images/bottom-icon4.svg" alt=""> Компания</a>
+		</div>
+
+
+
+	</div>
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- Modal -->
+	<div class="modal fade site-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="exampleModalLabel">Выберите регион или город</h1>
+					<button type="button" class="btn-close modal-btn" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-search">
+						<form class="modal-search__form">
+							<div class="modal-search__control">
+								<input id="myInput" type="search" placeholder="Москва">
+								<button class="modal-search__btn">Найти</button>
+							</div>
+
+							<div class="region-block">
+								<ul class="region-block__list">
+									<li><a href="#">Москва</a></li>
+									<li><a href="#">Московская область</a></li>
+									<li><a href="#">Санкт-Петербург</a></li>
+									<li><a href="#">Ленинградская область</a></li>
+									<li><a href="#">Екатеринбург</a></li>
+									<li><a href="#">Краснодар</a></li>
+									<li><a href="#">Новосибирск</a></li>
+									<li><a href="#">Красноярск</a></li>
+								</ul>
+								<ul class="region-block__list">
+									<li><a href="#">Челябинск</a></li>
+									<li><a href="#">Ростов-на-Дону</a></li>
+									<li><a href="#">Тюмень</a></li>
+									<li><a href="#">Уфа</a></li>
+									<li><a href="#">Казань</a></li>
+									<li><a href="#">Пермь</a></li>
+									<li><a href="#">Нижний Новгород</a></li>
+									<li><a href="#">Самара</a></li>
+								</ul>
+								<ul class="region-block__list">
+									<li><a href="#">Саратов</a></li>
+									<li><a href="#">Омск</a></li>
+									<li><a href="#">Балашиха</a></li>
+									<li><a href="#">Волгоград</a></li>
+									<li><a href="#">Воронеж</a></li>
+									<li><a href="#">Иркутск</a></li>
+									<li><a href="#">Хабаровск</a></li>
+									<li><a href="#">Томск</a></li>
+								</ul>
+							</div><button class="modal-search__btn modal-search__btn_mobile">Выбрать</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+
+</body>
+
+</html>
