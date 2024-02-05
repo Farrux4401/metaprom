@@ -609,11 +609,26 @@ li {
 
 .filter-razdel select {
   min-width: 140px;
+  font-size: 13px;
+  color: #c2c2c2;
+  transition: 200ms;
 }
-
+.filter-razdel select:hover {
+  cursor: pointer;
+  color: #5c97bf;
+  border-color: #5c97bf;
+}
 .filter-razdel .form-select:focus {
   box-shadow: none;
   cursor: pointer;
+  border-color: #c2c2c2;
+}
+
+.form-select {
+  background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.375 5.25L7 9.625L2.625 5.25" stroke="%23C2C2C2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.filter-razdel .form-select:hover {
+  background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.375 5.25L7 9.625L2.625 5.25" stroke="%235C97BF" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 
 .btn-prt {
@@ -628,6 +643,10 @@ li {
   border: none;
   border-radius: 6px;
   background: #5c97bf;
+  transition: 200ms;
+}
+.btn-prt:hover {
+  background: #4c7ea0;
 }
 .filter-actions {
   display: flex;
@@ -731,6 +750,11 @@ li {
   line-height: 30px; /* 200% */
 }
 .tags-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags-item .tags-item__blc {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -2228,6 +2252,40 @@ li {
   }
   .mobile-pagination {
     display: block;
+  }
+  .tags-item {
+    overflow-x: scroll;
+    position: relative;
+  }
+  .tags-item::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .tags-item {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .tags-item::after {
+    content: "";
+
+    position: fixed;
+    right: 0;
+    /* top: 0; */
+    width: 30%;
+    height: 20%;
+    background: linear-gradient(
+      270deg,
+      rgb(255, 255, 255) 1.158%,
+      rgba(255, 255, 255, 0) 84.869%
+    );
+  }
+  .tags-item .tags-item__blc {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .tags-item .tags-item__blc .tags-item__link {
+    min-width: max-content;
   }
 }
 
